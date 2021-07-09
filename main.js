@@ -309,5 +309,11 @@ const rockPaperScissors = function (move,reset) {
      return  `Won: ${wins}, Lost:${++losts}`;
   }
 
-
 };
+
+
+
+
+
+
+//Last test
