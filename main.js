@@ -140,6 +140,7 @@ const resetCount = function (start) {
 
 
 console.log('Q6');
+console.log('Q7');//********************************************************************************************** */
 const createToDoList = function (toDo) {
     let toDoList = '';
     
@@ -156,13 +157,150 @@ const createToDoList = function (toDo) {
 const toDoListOne = createToDoList();
 
 
-console.log('Q7');
+
+
+console.log('Q8');
+let accountBalance = 0;
+const deposit = function (amount) {
+    accountBalance += amount; 
+    return   accountBalance;
+};
+  
+  deposit(100); // => 100
+  deposit(50); // => 150
+  
+
+
+
+console.log('Q9');
+const withdraw = function (amount) {
+
+    if (accountBalance <= amount) {
+        return 'insufficient funds, current balance: 30';
+    }
+
+   accountBalance -= amount;
+   return accountBalance;
+};
+  
+  deposit(100); // => 100
+  deposit(50); // => 150
+  withdraw(70); // => 80
+  deposit(50); // => 130
+  withdraw(100); // => 30
+  withdraw(100); // => "insufficient funds, current balance: 30"
+
+  
+
+console.log('Q10');/**************************************************************************** */
 
 
 
 
-console.log('Q1');
-console.log('Q1');
-console.log('Q1');
-console.log('Q1');
+
+
+console.log('*******************************************');
+console.log('*********Extra Practice**********');
+// every time the function is called it must check if the passed argument is the maximum number, minimum number, or
+// both, and preserve the result for later invocations
+let min = -Infinity;
+let max = Infinity;
+const minMax = function (number) {
+    if (min === -Infinity && max === Infinity) {
+        min = max = number;
+    }
+    if (number > max) {
+        max = number;
+    }
+    else if (min > number) {
+        min = number;
+    }
+
+    return `The maximum number is: ${max} and the minimum number is ${min}`
+
+  };
+  
+  //minMax(5); // => "the maximum number is: 5 and the minimum number is 5"
+  //minMax(2); // => "the maximum number is: 5 and the minimum number is 2"
+  //minMax(3); // => "the maximum number is: 5 and the minimum number is 2"
+  //minMax(7); // => "the maximum number is: 7 and the minimum number is 2"
+  //minMax(0); // => "the maximum number is: 7 and the minimum number is 0"
+  
+
+
+
+
+console.log('Q2');
+let wins = 0;
+let losts = 0;
+
+
+
+const randomMove = function () {
+    const move =   Math.random();
+   
+    if (move <= (1/3)) {
+        return 'rock';
+    }
+    else if (move <= (2/3)) {
+        return 'paper';
+    }
+    else {
+        return 'scissors';
+    }
+
+  };
+
+
+  const rockPaperScissors = function (move,reset) {
+    const computerMove = randomMove();
+
+   if (reset && move === '') {
+       return "The game has been resetted";
+   } 
+
+    if (wins === 3 || losts === 3 || reset) {
+        wins = losts = 0;
+    }
+
+
+
+  if (move !== 'rock' && move !== 'scissors' && move !== 'paper') {
+      return  "invalid move";
+  }     
+
+  if (computerMove === move) {
+      return 'its a draw';
+  }
+  else if ((computerMove === 'rock' &&  move === 'paper') ||
+           (computerMove === 'scissors' &&  move === 'rock') ||
+           (computerMove === 'paper' &&  move === 'scissors')
+  ) {
+     
+     return `Won: ${++wins}, Lost:${losts}`;
+  }
+  else if ((move === 'rock' &&  computerMove === 'paper') ||
+           (move === 'scissors' &&  computerMove === 'rock') ||
+           (move === 'paper' &&  computerMove === 'scissors')
+  ) {
+     return  `Won: ${wins}, Lost:${++losts}`;
+  }
+
+  
+
+};
+
+
+  
+ //rockPaperScissors("rock"); // => "Won: 1, Lost:0"
+ //rockPaperScissors("rock"); // => "Won: 1, Lost:1"
+ //rockPaperScissors("paper"); // => "Won: 1, Lost:2"
+  
+
+
+
+
+
+
+
 console.log('Q1');
