@@ -313,3 +313,4 @@ const rockPaperScissors = function (move,reset) {
 
 };
 
+//Testing
