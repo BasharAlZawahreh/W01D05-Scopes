@@ -90,7 +90,7 @@ func2(26); // Error of redeclaring the variable age!
 
 
 console.log('Q3');
-let count = 4;
+let count = 5;
 const countDown = function () {
     if (count === 0) {
         return "count down is over";
@@ -108,10 +108,59 @@ const countDown = function () {
   
 
 
-console.log('Q1');
-console.log('Q1');
-console.log('Q1');
-console.log('Q1');
+console.log('Q4');
+
+
+const countUp = function () {
+    return ++count;
+};
+  
+ //countUp(); // => 4
+ //countUp(); // => 5
+ //countUp(); // => 6
+ //countUp(); // => 7
+ //countUp(); // => 8
+  
+
+
+
+
+console.log('Q5');
+const resetCount = function (start) {
+    count = start;
+  };
+  
+  resetCount(0); // => "the count has been reset"
+  countUp(); // => 1
+  resetCount(10); // => "the count has been reset"
+  countUp(); // => 11
+  
+
+
+
+
+console.log('Q6');
+const createToDoList = function (toDo) {
+    let toDoList = '';
+    
+    return function(){
+        toDoList += toDo + ' ';
+        
+        return toDoList;
+    }
+
+    
+};
+
+
+const toDoListOne = createToDoList();
+
+
+console.log('Q7');
+
+
+
+
 console.log('Q1');
 console.log('Q1');
 console.log('Q1');
