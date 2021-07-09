@@ -201,6 +201,7 @@ console.log('Q10');/************************************************************
 
 console.log('*******************************************');
 console.log('*********Extra Practice**********');
+console.log('Q1');
 // every time the function is called it must check if the passed argument is the maximum number, minimum number, or
 // both, and preserve the result for later invocations
 let min = -Infinity;
@@ -231,29 +232,51 @@ const minMax = function (number) {
 
 
 console.log('Q2');
+console.log('Q3');
+console.log('Q5');
 let wins = 0;
 let losts = 0;
-
-
+let computerMove  = '';
 
 const randomMove = function () {
     const move =   Math.random();
-   
-    if (move <= (1/3)) {
-        return 'rock';
+  
+    if (computerMove  !== '') {
+        if (move <= (1/3)) {
+            return  'rock';
+        }
+        else if (move <= (2/3)) {
+            return  'paper';
+        }
+        else {
+            return  'scissors';
+        }
+        
     }
-    else if (move <= (2/3)) {
-        return 'paper';
-    }
-    else {
-        return 'scissors';
+    
+    else{
+        if (move <= (1/4)) {
+            return  'rock';
+        }
+        else if (move <= (2/4)) {
+            return  'paper';
+        }
+        else if(move <= (2/4)) {
+            return  'scissors';
+        }
+        else{
+            return computerMove;
+        }
     }
 
-  };
+  
+};
 
 
-  const rockPaperScissors = function (move,reset) {
-    const computerMove = randomMove();
+const rockPaperScissors = function (move,reset) {
+    
+     computerMove = randomMove();
+    //lastMove = randomMove();
 
    if (reset && move === '') {
        return "The game has been resetted";
@@ -290,17 +313,3 @@ const randomMove = function () {
 
 };
 
-
-  
- //rockPaperScissors("rock"); // => "Won: 1, Lost:0"
- //rockPaperScissors("rock"); // => "Won: 1, Lost:1"
- //rockPaperScissors("paper"); // => "Won: 1, Lost:2"
-  
-
-
-
-
-
-
-
-console.log('Q1');
