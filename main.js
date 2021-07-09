@@ -312,8 +312,6 @@ const rockPaperScissors = function (move,reset) {
 };
 
 
-
-
-
-
-//Last test
+function printTest(){
+    console.log('test');
+}
