@@ -1,11 +1,119 @@
 console.log(arrowTitle)
 /* START CODE UNDER THIS LINE */
 
+
+console.log('*********Pulse Check**********');
+console.log('Q1');
 let myFavoriteFood  = 'Maqlouba';
 // make sure that the variable is in the global scope
 const favoriteFood = function () {
-    myFavoriteFood = 'Mansaf';
+    return myFavoriteFood;
+};
+
+favoriteFood(); // => the value of `myFavoriteFood` variable
+
+
+console.log('Q2');
+const updateFavoriteFood = function (newValue) {
+    myFavoriteFood = newValue;
+};
+
+updateFavoriteFood("Pizza");
+favoriteFood(); // => "Pizza"
+
+
+
+console.log('Q2');
+console.log('Q3');
+const createCounter = function (start) {
+    let counter = start;
+    
+    // this anonymous function is a closure function that has access to its own closure variable
+    return function () {
+        return ++counter;
+    };
+};
+
+let counter1 = createCounter(5);
+let counter2 = createCounter(7);
+
+
+
+
+console.log('**********************************************');
+console.log('*********Practice**********');
+console.log('Q1');
+
+let age = 25;
+if (true) {
+  age = 30;
+}
+age; // Always the value of age will be changed to 30 because the condition is always true
+
+
+const myName = "John";
+if (true) {
+    const myName = "Jane";
+}
+
+ myName; // here we will face an Error of changing a constant value
+
+
+
+
+console.log('Q2');
+let number = 10;
+const func1 = function () {
+  let number = 15;
+
+  if (true) {
+    let number = 24;
+  }
+
+  return number;
+};
+
+func1(); // Error of redeclaring the variable number!
+
+const func2 = function (age) {
+  age = 10;
+  if (true) {
+    let age = 24;
+    age = 20;
+  }
+
+  return age;
+};
+
+func2(26); // Error of redeclaring the variable age!
+
+
+
+console.log('Q3');
+let count = 4;
+const countDown = function () {
+    if (count === 0) {
+        return "count down is over";
+    }
+
+    return --count;
 };
   
-  favoriteFood(); // => the value of `myFavoriteFood` variable
+  //countDown(); // => 4
+  //countDown(); // => 3
+  //countDown(); // => 2
+  //countDown(); // => 1
+  //countDown(); // => 0
+  //countDown(); // => "count down is over"
   
+
+
+console.log('Q1');
+console.log('Q1');
+console.log('Q1');
+console.log('Q1');
+console.log('Q1');
+console.log('Q1');
+console.log('Q1');
+console.log('Q1');
+console.log('Q1');
