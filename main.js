@@ -128,12 +128,12 @@ const countUp = function () {
 console.log('Q5');
 const resetCount = function (start) {
     count = start;
-  };
+};
   
-  resetCount(0); // => "the count has been reset"
-  countUp(); // => 1
-  resetCount(10); // => "the count has been reset"
-  countUp(); // => 11
+  //resetCount(0); // => "the count has been reset"
+  //countUp(); // => 1
+  //resetCount(10); // => "the count has been reset"
+  //countUp(); // => 11
   
 
 
@@ -166,8 +166,8 @@ const deposit = function (amount) {
     return   accountBalance;
 };
   
-  deposit(100); // => 100
-  deposit(50); // => 150
+  //deposit(100); // => 100
+  //deposit(50); // => 150
   
 
 
@@ -183,12 +183,12 @@ const withdraw = function (amount) {
    return accountBalance;
 };
   
-  deposit(100); // => 100
-  deposit(50); // => 150
-  withdraw(70); // => 80
-  deposit(50); // => 130
-  withdraw(100); // => 30
-  withdraw(100); // => "insufficient funds, current balance: 30"
+  //deposit(100); // => 100
+  //deposit(50); // => 150
+  //withdraw(70); // => 80
+  //deposit(50); // => 130
+  //withdraw(100); // => 30
+  //withdraw(100); // => "insufficient funds, current balance: 30"
 
   
 
@@ -311,7 +311,3 @@ const rockPaperScissors = function (move,reset) {
 
 };
 
-
-function printTest(){
-    console.log('test');
-}
